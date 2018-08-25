@@ -46,11 +46,15 @@ class SearchUsers extends Component {
     errors: {},
   }
 
+  emitEmpty = () => {
+    this.setState({ userName: '' });
+  }
+
   onChangeUserName = async (e) => {
     const searchQuery = e.target.value;
     this.setState({ userName: searchQuery });
 
-    if (searchQuery === undefined) {
+    if (searchQuery === '') {
       this.setState({
         errors: {
           name: 'Input field can\'t be empty',
