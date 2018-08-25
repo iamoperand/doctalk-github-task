@@ -76,7 +76,7 @@ class SearchUsers extends Component {
         {
           items,
         },
-      } = await axios(`${githubApiRoutes.SearchUsers}${searchQuery}`, axiosConfig);
+      } = await axios(`${githubApiRoutes.SearchUsers}${searchQuery}&sort=followers`, axiosConfig);
 
       this.setState({
         users: items,
