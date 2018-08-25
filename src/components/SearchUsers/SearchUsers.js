@@ -56,6 +56,8 @@ class SearchUsers extends Component {
 
     if (searchQuery === '') {
       this.setState({
+        users: [],
+        count: 0,
         errors: {
           name: 'Input field can\'t be empty',
         },
